@@ -21,7 +21,9 @@ def ask():
     response = client.responses.create(
         model="openai/gpt-oss-20b",
         input=[
-                {"role": "system", "content": "Act like a helpful personal assisstant"},
+                {"role": "system",
+    "content": "You are a helpful personal assistant.Keep the answer simple and concise. Do not use Markdown, tables, headings, bullet points, or special formatting."
+},
                 {"role": "user", "content": question}
            ],
             temperature=0.7,
